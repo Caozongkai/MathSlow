@@ -29,12 +29,9 @@ def multiply_fast(a, b):
     if b < 0:
         neg = not neg
         b = -b
+    
     if a < 10 and b < 10:
         ans = mul_table[a][b]
-    elif a < 10:
-        ans = sum([b for _ in range(a)])
-    elif b < 10:
-        ans = sum([a for _ in range(b)])
     else:
         a, b = str(a), str(b)
 
